@@ -52,7 +52,7 @@ namespace shanuMVCUserRoles.Controllers
             {
                 db.OOHRequestViewModel.Add(oOHRequestViewModel);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("SuccessOOH", "Success");
             }
 
             return View(oOHRequestViewModel);

@@ -180,6 +180,7 @@
     <Compile Include="Controllers\OOHRequestViewModelsController.cs" />
     <Compile Include="Controllers\ProfileViewModelsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\SuccessController.cs" />
     <Compile Include="Controllers\TimeSheetViewModelsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -208,6 +209,10 @@
     <Compile Include="Migrations\201709050629566_timesheet.cs" />
     <Compile Include="Migrations\201709050629566_timesheet.Designer.cs">
       <DependentUpon>201709050629566_timesheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709051030490_change.cs" />
+    <Compile Include="Migrations\201709051030490_change.Designer.cs">
+      <DependentUpon>201709051030490_change.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -298,6 +303,10 @@
     <Content Include="Views\TimeSheetViewModels\Details.cshtml" />
     <Content Include="Views\TimeSheetViewModels\Edit.cshtml" />
     <Content Include="Views\TimeSheetViewModels\Index.cshtml" />
+    <Content Include="Views\Success\SuccessRegistration.cshtml" />
+    <Content Include="Views\Success\SuccessHoliday.cshtml" />
+    <Content Include="Views\Success\SuccessOOH.cshtml" />
+    <Content Include="Views\HolidayViewModels\InPending.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709050629566_timesheet.resx">
       <DependentUpon>201709050629566_timesheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709051030490_change.resx">
+      <DependentUpon>201709051030490_change.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

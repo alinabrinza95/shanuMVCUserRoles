@@ -145,3 +145,5 @@ C:\Users\myher\Downloads\ASP.NET MVC 5 Security And Creating User Role (1)\C#\sh
 C:\Users\myher\Downloads\ASP.NET MVC 5 Security And Creating User Role (1)\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.Profile1.resources
 C:\Users\myher\Downloads\ASP.NET MVC 5 Security And Creating User Role (1)\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.ooh.resources
 C:\Users\myher\Downloads\ASP.NET MVC 5 Security And Creating User Role (1)\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.timesheet.resources
+C:\Users\myher\Downloads\ASP.NET MVC 5 Security And Creating User Role (1)\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.change.resources
+C:\Users\myher\Downloads\ASP.NET MVC 5 Security And Creating User Role (1)\C#\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.csprojResolveAssemblyReference.cache

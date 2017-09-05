@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using shanuMVCUserRoles.Models;
 
@@ -52,11 +48,22 @@ namespace shanuMVCUserRoles.Controllers
             {
                 db.AspNetHolidays.Add(holidayViewModel);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("SuccessHoliday", "Success");
             }
 
             return View(holidayViewModel);
         }
+
+
+        public ActionResult InPending()
+        {
+            return View(db.AspNetHolidays.ToList());
+        }
+
+
+
+
+
 
         // GET: HolidayViewModels/Edit/5
         public ActionResult Edit(int? id)
