@@ -46,17 +46,36 @@ namespace shanuMVCUserRoles.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FullName,Day,Hours,TicketNUmber,TeamLeaderEmail,Flag")] OOHRequestViewModel oOHRequestViewModel)
+        public ActionResult Create([Bind(Include = "Id,FullName,Day,Hours,TicketNUmber,TeamLeaderEmail,Flag,Email")] OOHRequestViewModel oOHRequestViewModel)
         {
             if (ModelState.IsValid)
             {
                 db.OOHRequestViewModel.Add(oOHRequestViewModel);
                 db.SaveChanges();
-                return RedirectToAction("SuccessOOH", "Success");
+                return RedirectToAction("SuccessOOH","Success");
             }
 
             return View(oOHRequestViewModel);
         }
+
+        public ActionResult InPending()
+        {
+            var list = from b in db.OOHRequestViewModel
+                       join c in db.Users on b.Email equals c.Email
+                       where (c.UserName.Equals(User.Identity.Name) && b.Flag.Equals(false))
+                       select b;
+            return View(list.ToList());
+        }
+
+        public ActionResult Approved()
+        {
+            var list = from b in db.OOHRequestViewModel
+                       join c in db.Users on b.Email equals c.Email
+                       where (c.UserName.Equals(User.Identity.Name) && b.Flag.Equals(true))
+                       select b;
+            return View(list.ToList());
+        }
+
 
         // GET: OOHRequestViewModels/Edit/5
         public ActionResult Edit(int? id)
@@ -78,7 +97,7 @@ namespace shanuMVCUserRoles.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FullName,Day,Hours,TicketNUmber,TeamLeaderEmail,Flag")] OOHRequestViewModel oOHRequestViewModel)
+        public ActionResult Edit([Bind(Include = "Id,FullName,Day,Hours,TicketNUmber,TeamLeaderEmail,Flag,Email")] OOHRequestViewModel oOHRequestViewModel)
         {
             if (ModelState.IsValid)
             {

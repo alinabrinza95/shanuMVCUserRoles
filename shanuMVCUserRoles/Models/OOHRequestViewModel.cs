@@ -33,5 +33,9 @@ namespace shanuMVCUserRoles.Models
 
         [Required]
         public bool Flag { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
     }
 }

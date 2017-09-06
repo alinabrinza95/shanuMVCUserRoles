@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<shanuMVCUserRoles.Models.HolidayViewModel>
-
 @{
     ViewBag.Title = "InPending";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,74 +7,40 @@
 <h2>InPending</h2>
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TeamLeaderName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DaysOff)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TLEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Flag)
-        </th>
-        <th></th>
-    </tr>
+<div class="table">
 
-@foreach (var item in Model)
-{
-    if (item.Flag == false && item.Email ==User.Identity.Name)
+
+    @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamLeaderName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DaysOff)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TLEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Flag)
-            </td>
+        
+        
 
-        </tr>
+            <div class="form-style-8" style="font-family: 'Open Sans Condensed', arial, sans; opacity: 1 ;width: 500px; animation-fill-mode:backwards;   padding: 30px;    background: #FFFFFF;    margin: 50px auto;    box-shadow: 0px 0px 15px rgba(215, 131, 42, 0.52);    -moz-box-shadow: 0px 0px 15px rgba(215, 131, 42, 0.52);    -webkit-box-shadow:  0px 0px 15px rgba(215, 131, 42, 0.52);">
+
+                <p>
+                    <b>@Html.DisplayNameFor(model => model.TeamLeaderName)</b> :
+                    @Html.DisplayFor(modelItem => item.TeamLeaderName)
+                </p>
+                <p>
+                    <b>@Html.DisplayNameFor(model => model.StartDate)</b> :
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </p>
+                <p>
+                    <b>@Html.DisplayNameFor(model => model.EndDate)</b> :
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </p>
+                <p>
+                    <b>@Html.DisplayNameFor(model => model.DaysOff)</b> :
+                    @Html.DisplayFor(modelItem => item.DaysOff)
+                </p>
+                <p>
+                    <b>@Html.DisplayNameFor(model => model.TLEmail)</b> :
+                    @Html.DisplayFor(modelItem => item.TLEmail)
+                </p>
+
+            </div>
+        
+
     }
 
-}
-
-</table>
+</div>

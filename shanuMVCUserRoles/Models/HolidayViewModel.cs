@@ -47,5 +47,7 @@ namespace shanuMVCUserRoles.Models
         [Required]
         public bool Flag { get; set; }
 
+        
+
     }
 }

@@ -214,6 +214,18 @@
     <Compile Include="Migrations\201709051030490_change.Designer.cs">
       <DependentUpon>201709051030490_change.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709060728173_loginViewModel.cs" />
+    <Compile Include="Migrations\201709060728173_loginViewModel.Designer.cs">
+      <DependentUpon>201709060728173_loginViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709060731018_removeLogin.cs" />
+    <Compile Include="Migrations\201709060731018_removeLogin.Designer.cs">
+      <DependentUpon>201709060731018_removeLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709060846041_alterOOH.cs" />
+    <Compile Include="Migrations\201709060846041_alterOOH.Designer.cs">
+      <DependentUpon>201709060846041_alterOOH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\HolidayViewModel.cs" />
@@ -293,11 +305,6 @@
     <Content Include="Views\ProfileViewModels\Details.cshtml" />
     <Content Include="Views\ProfileViewModels\Edit.cshtml" />
     <Content Include="Views\ProfileViewModels\Index.cshtml" />
-    <Content Include="Views\OOHRequestViewModels\Create.cshtml" />
-    <Content Include="Views\OOHRequestViewModels\Delete.cshtml" />
-    <Content Include="Views\OOHRequestViewModels\Details.cshtml" />
-    <Content Include="Views\OOHRequestViewModels\Edit.cshtml" />
-    <Content Include="Views\OOHRequestViewModels\Index.cshtml" />
     <Content Include="Views\TimeSheetViewModels\Create.cshtml" />
     <Content Include="Views\TimeSheetViewModels\Delete.cshtml" />
     <Content Include="Views\TimeSheetViewModels\Details.cshtml" />
@@ -307,6 +314,14 @@
     <Content Include="Views\Success\SuccessHoliday.cshtml" />
     <Content Include="Views\Success\SuccessOOH.cshtml" />
     <Content Include="Views\HolidayViewModels\InPending.cshtml" />
+    <Content Include="Views\HolidayViewModels\Approved.cshtml" />
+    <Content Include="Views\OOHRequestViewModels\Create.cshtml" />
+    <Content Include="Views\OOHRequestViewModels\Delete.cshtml" />
+    <Content Include="Views\OOHRequestViewModels\Details.cshtml" />
+    <Content Include="Views\OOHRequestViewModels\Edit.cshtml" />
+    <Content Include="Views\OOHRequestViewModels\Index.cshtml" />
+    <Content Include="Views\OOHRequestViewModels\InPending.cshtml" />
+    <Content Include="Views\OOHRequestViewModels\Approved.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -340,6 +355,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709051030490_change.resx">
       <DependentUpon>201709051030490_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709060728173_loginViewModel.resx">
+      <DependentUpon>201709060728173_loginViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709060731018_removeLogin.resx">
+      <DependentUpon>201709060731018_removeLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709060846041_alterOOH.resx">
+      <DependentUpon>201709060846041_alterOOH.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

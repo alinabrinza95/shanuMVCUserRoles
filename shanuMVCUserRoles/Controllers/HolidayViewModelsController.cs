@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using shanuMVCUserRoles.Models;
+using Microsoft.AspNet.Identity;
 
 namespace shanuMVCUserRoles.Controllers
 {
@@ -54,14 +55,26 @@ namespace shanuMVCUserRoles.Controllers
             return View(holidayViewModel);
         }
 
+       
 
         public ActionResult InPending()
         {
-            return View(db.AspNetHolidays.ToList());
+            var list = from b in db.AspNetHolidays
+                       join c in db.Users on b.Email equals c.Email
+                       where (c.UserName.Equals(User.Identity.Name) && b.Flag.Equals(false))
+                       select b;
+            return View(list.ToList());
         }
 
 
-
+        public ActionResult Approved()
+        {
+            var list = from b in db.AspNetHolidays
+                       join c in db.Users on b.Email equals c.Email
+                       where (c.UserName.Equals(User.Identity.Name) && b.Flag.Equals(true))
+                       select b;
+            return View(list.ToList());
+        }
 
 
 
