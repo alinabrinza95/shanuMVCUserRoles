@@ -4,6 +4,7 @@ using System.Net;
 using System.Web.Mvc;
 using shanuMVCUserRoles.Models;
 using Microsoft.AspNet.Identity;
+using System;
 
 namespace shanuMVCUserRoles.Controllers
 {
@@ -42,11 +43,14 @@ namespace shanuMVCUserRoles.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Email,TeamLeaderName,StartDate,EndDate,DaysOff,TLEmail,Flag")] HolidayViewModel holidayViewModel)
         {
+            
+
             if (ModelState.IsValid)
             {
+                
                 db.AspNetHolidays.Add(holidayViewModel);
                 db.SaveChanges();
                 return RedirectToAction("SuccessHoliday", "Success");
@@ -56,7 +60,7 @@ namespace shanuMVCUserRoles.Controllers
         }
 
        
-
+        //employee inpending and approoved
         public ActionResult InPending()
         {
             var list = from b in db.AspNetHolidays
@@ -64,7 +68,7 @@ namespace shanuMVCUserRoles.Controllers
                        where (c.UserName.Equals(User.Identity.Name) && b.Flag.Equals(false))
                        select b;
             return View(list.ToList());
-        }
+        }      
 
 
         public ActionResult Approved()
@@ -76,6 +80,24 @@ namespace shanuMVCUserRoles.Controllers
             return View(list.ToList());
         }
 
+        //teamleader inpending and aproved
+        public ActionResult InPendingTeamLeader()
+        {
+            var list = from b in db.AspNetHolidays
+                       join c in db.Users on b.TLEmail equals c.Email
+                       where (c.UserName.Equals(User.Identity.Name) && b.Flag.Equals(false))
+                       select b;
+            return View(list.ToList());
+        }
+
+        public ActionResult ApprovedTeamLeader()
+        {
+            var list = from b in db.AspNetHolidays
+                       join c in db.Users on b.TLEmail equals c.Email
+                       where (c.UserName.Equals(User.Identity.Name) && b.Flag.Equals(true))
+                       select b;
+            return View(list.ToList());
+        }
 
 
         // GET: HolidayViewModels/Edit/5
@@ -102,12 +124,16 @@ namespace shanuMVCUserRoles.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.Entry(holidayViewModel).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
             return View(holidayViewModel);
         }
+
+        
 
         // GET: HolidayViewModels/Delete/5
         public ActionResult Delete(int? id)

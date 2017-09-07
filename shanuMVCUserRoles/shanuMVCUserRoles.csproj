@@ -226,6 +226,14 @@
     <Compile Include="Migrations\201709060846041_alterOOH.Designer.cs">
       <DependentUpon>201709060846041_alterOOH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709061332515_removeRequiredFirstNameHoliday.cs" />
+    <Compile Include="Migrations\201709061332515_removeRequiredFirstNameHoliday.Designer.cs">
+      <DependentUpon>201709061332515_removeRequiredFirstNameHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709061335175_enableRequiredFirstNameHoliday.cs" />
+    <Compile Include="Migrations\201709061335175_enableRequiredFirstNameHoliday.Designer.cs">
+      <DependentUpon>201709061335175_enableRequiredFirstNameHoliday.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\HolidayViewModel.cs" />
@@ -322,6 +330,8 @@
     <Content Include="Views\OOHRequestViewModels\Index.cshtml" />
     <Content Include="Views\OOHRequestViewModels\InPending.cshtml" />
     <Content Include="Views\OOHRequestViewModels\Approved.cshtml" />
+    <Content Include="Views\HolidayViewModels\InPendingTeamLeader.cshtml" />
+    <Content Include="Views\HolidayViewModels\ApprovedTeamLeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -364,6 +374,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709060846041_alterOOH.resx">
       <DependentUpon>201709060846041_alterOOH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709061332515_removeRequiredFirstNameHoliday.resx">
+      <DependentUpon>201709061332515_removeRequiredFirstNameHoliday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709061335175_enableRequiredFirstNameHoliday.resx">
+      <DependentUpon>201709061335175_enableRequiredFirstNameHoliday.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -230,3 +230,5 @@ C:\Users\myher\Desktop\shanuMVCUserRoles\shanuMVCUserRoles\obj\Debug\shanuMVCUse
 C:\Users\myher\Desktop\shanuMVCUserRoles\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.loginViewModel.resources
 C:\Users\myher\Desktop\shanuMVCUserRoles\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.removeLogin.resources
 C:\Users\myher\Desktop\shanuMVCUserRoles\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.alterOOH.resources
+C:\Users\myher\Desktop\shanuMVCUserRoles\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.removeRequiredFirstNameHoliday.resources
+C:\Users\myher\Desktop\shanuMVCUserRoles\shanuMVCUserRoles\obj\Debug\shanuMVCUserRoles.Migrations.enableRequiredFirstNameHoliday.resources
